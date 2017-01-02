@@ -40,7 +40,7 @@ public class Main {
 			
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
-		String message1 = "Workflow Engine wurde gestoppt.";
+		String message1 = "Workflow Engine wurde gestartet...";
 		mav.addObject("message", message1);
 
 		return mav;
@@ -49,7 +49,7 @@ public class Main {
 	@RequestMapping("/reset")
 	public ModelAndView startCollection() {
 		System.out.println("UI: Got /reset, Request #" + ++counter);
-		message0 = "Workflow Engine gestoppt...";
+		message0 = "Workflow Engine wurde gestoppt...";
 
 		Status.bpmRunning = false;
 
