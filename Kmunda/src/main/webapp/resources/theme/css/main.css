@@ -1,0 +1,17 @@
+#navibar {
+    min-height: 100px;
+}
+
+
+#imgbrand{
+     height:70px;
+    width: inherit;
+}
+
+#testb {
+  margin-top: 50px;
+}
+
+h1{
+	color:red;
+}
