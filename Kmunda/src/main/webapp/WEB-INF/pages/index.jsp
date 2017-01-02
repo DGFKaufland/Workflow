@@ -35,9 +35,7 @@
 			</div>
 
 			<div class="sidebar" role="navigation" id="testb">
-				<div class="collapse navbar-collapse" id="collapsed-navigation"
-					style="margin-top: 50px; align: top">
-					<h4>Engine Tasks</h4>
+				<div class="collapse navbar-collapse" id="collapsed-navigation" style="margin-top: 10px; margin-left: 10px; align: top">					<h4>Engine Tasks</h4>
 					<ul class="nav">
 						<li><div>
 								<a href="run.htm">Engine starten </a>
