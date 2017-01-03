@@ -68,6 +68,7 @@ public class DataAnalyzer implements Runnable {
 						// Start a WorkFlow instance
 						HashMap<String, Object> variables = new HashMap<String, Object>();
 						variables.put("flowData", currRec);
+						variables.put("Oeffnungszeiten_innerhalb", currRec.getOeffnungszeiten_innerhalb());
 						variables.put("Temp_ueber_Limit", true);
 						variables.put("Notification_ID", -1);
 						variables.put("Notification_Status", -1);
