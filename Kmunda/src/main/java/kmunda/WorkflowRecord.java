@@ -18,6 +18,7 @@ public class WorkflowRecord implements Serializable {
 	private String AbteilungsName;
 	private int Snooze_Open;
 	private int Snooze_Progress;
+	private int Markt_ID;
 
 	private String WBL_Andrede;
 	private String WBL_Vorname;
@@ -134,6 +135,15 @@ public class WorkflowRecord implements Serializable {
 		Snooze_Progress = aSnooze_Progress;
 	}
 
+	public int getMarkt_ID() {
+		return Markt_ID;
+	}
+
+	public void setMarkt_ID(int aMarkt_ID) {
+		Markt_ID = aMarkt_ID;
+	}
+
+	
 	// Warenbereichsleiter
 
 	public String getWBL_Andrede() {

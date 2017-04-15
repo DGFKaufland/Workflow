@@ -52,6 +52,7 @@ public class DBStatements extends DBConnection {
 				record.setHL_User_ID(rs.getInt("HL_User_ID"));
 				record.setHL_Mobile_ID(rs.getInt("HL_Mobile_ID"));
 				record.setHL_MobileName(rs.getString("HL_MobileName"));
+				record.setMarkt_ID(rs.getInt("Marktnummer"));
 				record.setOeffnungszeiten_von(rs.getTimestamp("Oeffnungszeiten_von"));
 				record.setOeffnungszeiten_bis(rs.getTimestamp("Oeffnungszeiten_bis"));
 				record.setOeffnungszeiten_innerhalb(rs.getInt("Oeffnungszeiten_innerhalb"));
