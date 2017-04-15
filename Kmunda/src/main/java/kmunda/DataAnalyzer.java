@@ -54,9 +54,8 @@ public class DataAnalyzer implements Runnable {
 		repositoryService.createDeployment().addClasspathResource("kmunda-workflow.bpmn").deploy();
 
 		try {
-
+			Status.dbs_sensordata = new DBStatements();
 			while (Status.bpmRunning) {
-				Status.dbs_sensordata = new DBStatements();
 				workflowRecordList = new ArrayList<WorkflowRecord>();
 				workflowRecordList = Status.dbs_sensordata.getUnprocessedData();
 

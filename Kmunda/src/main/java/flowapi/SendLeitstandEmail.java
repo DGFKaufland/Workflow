@@ -80,7 +80,7 @@ public class SendLeitstandEmail implements JavaDelegate {
 
 		try {
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("kaufland.leitstand@gmail.com"));// kaufland.sensoren@gmail.com"));
+			message.setFrom(new InternetAddress("kaufland.sensoren@gmail.com"));// kaufland.sensoren@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("jonas_fritzsch@gmx.de"));
 
 			//Damit Tasks vom Leitstand abgeschlossen werden können oder ein Schlummermodus gesetzt werden kann, muss 
