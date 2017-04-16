@@ -35,7 +35,7 @@ public class SendLeitstandEmail implements JavaDelegate {
 
 		// String timeStamp = new SimpleDateFormat("EEE, MMM d, HH:mm").format(new Date());
 		messageText = "Um den Fehler zu beheben oder den Schlummermodus zu aktivieren klicken Sie bitte auf den nachfolgenden Link \n\n"
-					+ "http://dgf-leitstand.azurewebsites.net/WebContent/?process_id=" 
+					+ "http://dgf-leitstand.azurewebsites.net/?process_id=" 
 				    + execution.getVariable("Notification_ID")
 				    + "&store="
 				    + data.getMarkt_ID()
