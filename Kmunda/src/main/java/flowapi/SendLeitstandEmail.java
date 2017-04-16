@@ -80,19 +80,9 @@ public class SendLeitstandEmail implements JavaDelegate {
 
 		try {
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("kaufland.sensoren@gmail.com"));// kaufland.sensoren@gmail.com"));
-			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("jonas_fritzsch@gmx.de"));
+			message.setFrom(new InternetAddress("kaufland.sensoren@gmail.com"));
+			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("kaufland.leitstand@gmail.com"));
 
-			//Damit Tasks vom Leitstand abgeschlossen werden können oder ein Schlummermodus gesetzt werden kann, muss 
-			//zwingend eine URL der Mail beigefügt werden mit der Referenz zum spezifischen Task
-			//Die URL sollte wie folgt aufgebaut werden, wobei die Rauten (#) dynamisch durch Werte ersetzt werden sollten
-			//http://localhost:8080/Leitstand/?process_id=###&store=###&departure=###&sensor=###
-			// process_id muss zwingend die aktuell gültige ID aus der Tabelle MobileNotification sein, für den die Nachricht erstellt wurde
-			//store, departure, sensor haben reinen Anzeigecharackter und sollten sich wie folgt zusammensetzen:
-			//store sollte Tabelle Markt die Marktnummer sein
-			//departure sollte Tabelle Abteilungstyp die Bezeichnung sein
-			//sensor sollte Tabelle Sensoren die Logische_ID sein
-			
 			message.setText(messageText);
 			message.setSubject(messageSubject);
 			Transport.send(message);
