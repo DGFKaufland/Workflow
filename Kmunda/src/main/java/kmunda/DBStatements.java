@@ -25,9 +25,10 @@ public class DBStatements extends DBConnection {
 		Connection con = null;
 		ResultSet rs = null;
 		String query = "{CALL WorkflowData()}";
+		CallableStatement stmt = null;
 		try {
 			con = getCf().createConnection();
-			CallableStatement stmt = con.prepareCall(query);
+			stmt = con.prepareCall(query);
 			rs = stmt.executeQuery();
 
 			int rowcount = 0;
@@ -72,15 +73,20 @@ public class DBStatements extends DBConnection {
 		} catch (SQLException e) {
 			log.error("Fehler beim Auslesen von getAllSensorsToStoreDepartment aus der Datenbank!", e);
 		}
+		finally
+        {
+            close( con, stmt, null );
+        }
 		return null;
 	}
 
 	public final void LogEscalation(String LogSens_ID) {
 		Connection con = null;
 		String query = "{CALL Escalate(?)}";
+		CallableStatement stmt = null;
 		try {
 			con = getCf().createConnection();
-			CallableStatement stmt = con.prepareCall(query);
+			stmt = con.prepareCall(query);
 			stmt.setString(1, LogSens_ID);
 			stmt.executeQuery();
 
@@ -88,15 +94,20 @@ public class DBStatements extends DBConnection {
 		} catch (SQLException e) {
 			log.error("Fehler beim Loggen einer Eskalation.", e);
 		}
+		finally
+        {
+            close( con, stmt, null );
+        }
 	}
 
 	public final boolean getSensorStatus(String LogSens_ID) {
 		Connection con = null;
 		String query = "{CALL SensorStatus(?)}";
 		ResultSet rs = null;
+		CallableStatement stmt = null;
 		try {
 			con = getCf().createConnection();
-			CallableStatement stmt = con.prepareCall(query);
+			stmt = con.prepareCall(query);
 			stmt.setString(1, LogSens_ID);
 			rs = stmt.executeQuery();
 
@@ -117,6 +128,10 @@ public class DBStatements extends DBConnection {
 		} catch (SQLException e) {
 			log.error("Fehler bei der Temperaturdaten-Abfrage: ", e);
 		}
+		finally
+        {
+            close( con, stmt, null );
+        }
 		return false;
 	}
 
@@ -124,9 +139,10 @@ public class DBStatements extends DBConnection {
 		Connection con = null;
 		String query = "{CALL NotificationStatus(?)}";
 		ResultSet rs = null;
+		CallableStatement stmt = null;
 		try {
 			con = getCf().createConnection();
-			CallableStatement stmt = con.prepareCall(query);
+			stmt = con.prepareCall(query);
 			stmt.setLong(1, notification_ID);
 			rs = stmt.executeQuery();
 
@@ -148,6 +164,10 @@ public class DBStatements extends DBConnection {
 		} catch (SQLException e) {
 			log.error("Fehler bei der NotificationStatus-Abfrage: ", e);
 		}
+		finally
+        {
+            close( con, stmt, null );
+        }
 		return -1;
 	}
 }
