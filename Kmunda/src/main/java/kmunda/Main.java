@@ -17,9 +17,9 @@ public class Main {
 	public ModelAndView init() {
 		System.out.println("UI: Got /bpm, Request #" + ++counter);
 		if (Status.bpmRunning) {
-			message0 = "BPM-Workflow aktiv... <br> ";
+			message0 = "BPM-Workflow für Samsung Tizen aktiv... <br> ";
 		} else
-			message0 = "BPM-Workflow inaktiv<br>";
+			message0 = "BPM-Workflow für Samsung Tizen inaktiv<br>";
 
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
@@ -31,7 +31,7 @@ public class Main {
 	public ModelAndView swicth() {
 		System.out.println("UI: Got /run, Request #" + ++counter);
 		if (Status.bpmRunning) {
-			message0 = "BPM-Workflow aktiv ... <br> ";
+			message0 = "BPM-Workflow für Samsung Tizen aktiv ... <br> ";
 		} else {
 			Status.bpmRunning = true;
 			T1 = new DataAnalyzer("DataAnalyzer");
@@ -40,7 +40,7 @@ public class Main {
 			
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
-		String message1 = "Workflow Engine wurde gestartet...";
+		String message1 = "Workflow Engine für Samsung Tizen wurde gestartet...";
 		mav.addObject("message", message1);
 
 		return mav;
@@ -49,7 +49,7 @@ public class Main {
 	@RequestMapping("/reset")
 	public ModelAndView startCollection() {
 		System.out.println("UI: Got /reset, Request #" + ++counter);
-		message0 = "Workflow Engine wurde gestoppt...";
+		message0 = "Workflow Engine für Samsung Tizen wurde gestoppt...";
 
 		Status.bpmRunning = false;
 
