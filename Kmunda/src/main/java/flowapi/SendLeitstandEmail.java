@@ -28,8 +28,6 @@ public class SendLeitstandEmail implements JavaDelegate {
 	String messageText;
 	String messageSubject;
 	
-	public static String sMobileMsg = "WARNUNG, Temperatur zu hoch! Werte(r) ";
-	
 	public void execute(DelegateExecution execution) throws Exception {
 		data = (WorkflowRecord) execution.getVariable("flowData");
 
