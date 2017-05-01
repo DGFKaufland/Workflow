@@ -36,7 +36,7 @@ public class DBStatements extends DBConnection {
 				rowcount = rs.getRow();
 				rs.beforeFirst();
 			}
-			System.out.println("Got " + rowcount + " rows.");
+			System.out.println("Data analyser: " + rowcount + " violation(s)");
 
 			while (rs.next()) {
 				WorkflowRecord record = new WorkflowRecord();
@@ -71,7 +71,7 @@ public class DBStatements extends DBConnection {
 			}
 			return criticalTempData;
 		} catch (SQLException e) {
-			log.error("Fehler beim Auslesen von getAllSensorsToStoreDepartment aus der Datenbank!", e);
+			log.error("Error when reading getAllSensorsToStoreDepartment from the database!", e);
 		}
 		finally
         {
@@ -92,7 +92,7 @@ public class DBStatements extends DBConnection {
 
 			System.out.println("Logged Escalation for Sensor ID " + LogSens_ID);
 		} catch (SQLException e) {
-			log.error("Fehler beim Loggen einer Eskalation.", e);
+			log.error("Error during logging of escalation.", e);
 		}
 		finally
         {
@@ -118,15 +118,15 @@ public class DBStatements extends DBConnection {
 			}
 			if (rowcount > 0) {
 				System.out.println(
-						"Temperaturdaten-Abfrage fuer Sensor: \"" + LogSens_ID + "\" Temperatur immernoch zu hoch!");
+						"Temperature data query for Sensor: \"" + LogSens_ID + "\" Temperature still over limit!");
 				return true;
 			} else {
-				System.out.println("Temperaturdaten-Abfrage fuer Sensor: \"" + LogSens_ID
-						+ "\" Temperatur wieder im Normalbereich.");
+				System.out.println("Temperature data query for Sensor: \"" + LogSens_ID
+						+ "\" Temperature (back) in normal range.");
 				return false;
 			}
 		} catch (SQLException e) {
-			log.error("Fehler bei der Temperaturdaten-Abfrage: ", e);
+			log.error("Error during temperature data query: ", e);
 		}
 		finally
         {
@@ -155,14 +155,14 @@ public class DBStatements extends DBConnection {
 				int result = -1;
 				while (rs.next())
 					result = rs.getInt("state");
-				System.out.println("NotificationStatus Abfrage fuer ID\"" + notification_ID + "\":" + result);
+				System.out.println("NotificationStatus query for ID\"" + notification_ID + "\":" + result);
 				return result;
 			} else {
-				System.out.println("Fehler bei der NotificationStatus Abfrage: " + notification_ID);
+				System.out.println("Error during NotificationStatus query: " + notification_ID);
 				return -1;
 			}
 		} catch (SQLException e) {
-			log.error("Fehler bei der NotificationStatus-Abfrage: ", e);
+			log.error("Error during NotificationStatus query: ", e);
 		}
 		finally
         {

@@ -55,7 +55,6 @@ public class SendLeitstandEmail implements JavaDelegate {
 		
 		System.out.println("Sending Email: \"" + messageText + "\"");
 		sendMail();
-		execution.setVariable("Notification_ID", notification_ID);
 	}
 
 	public void sendMail()
@@ -85,7 +84,7 @@ public class SendLeitstandEmail implements JavaDelegate {
 			message.setSubject(messageSubject);
 			Transport.send(message);
 
-			System.out.println("Email erfolgreich gesendet.");
+			System.out.println("Email successfully sent.");
 
 		} catch (MessagingException e) {
 			throw new RuntimeException(e);
