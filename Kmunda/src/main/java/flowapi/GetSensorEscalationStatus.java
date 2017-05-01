@@ -13,6 +13,6 @@ public class GetSensorEscalationStatus implements JavaDelegate {
 		System.out.println("Check limit violation for Sensor: " + data.getLogischeSensor_ID());
 		boolean Temp_ueber_Limit = Status.dbs_sensordata.getSensorStatus(data.getLogischeSensor_ID());
 		exe.setVariable("Temp_ueber_Limit", Temp_ueber_Limit);
-		System.out.println("Temperature over limit: " + Temp_ueber_Limit);
+		//System.out.println("Temperature over limit: " + Temp_ueber_Limit);
 	}
 }
