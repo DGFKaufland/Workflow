@@ -19,10 +19,11 @@ public class SendBackendNotifyWBL extends SendBackendNotify {
 	    SimpleDateFormat sdf = new SimpleDateFormat("EEE, MMM d, HH:mm");   
 	    TimeZone tz = TimeZone.getTimeZone("Europe/Berlin");
 	    sdf.setTimeZone(tz);
-	    sdf.format(new Date()); // will return a string rep of a date with the included format, better than:
-	                            // String timeStamp = new SimpleDateFormat("EEE, MMM d, HH:mm").format();
+	    String formattedNowInTimeZone = sdf.format(new Date()); 
+	    // will return a string rep of a date with the included format, better than:
+	    // String timeStamp = new SimpleDateFormat("EEE, MMM d, HH:mm").format();
 	    
-		messageText = "[" + sdf.toString() + "] " + sMobileMsg +
+		messageText = "[" + formattedNowInTimeZone + "] " + sMobileMsg +
 				      data.getAbteilungsName() + ": " + data.getTemperaturwert() + " Grad.";
 		System.out.println("Flow SendBackendNotify: \"" + messageText + "\"");
 		sendMessage(data.getWBL_Mobile_ID(), messageText);
