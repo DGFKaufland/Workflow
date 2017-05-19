@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kmunda Workflow Engine</title>
+<title>Kmunda Workflow Engine Samsung Tizen</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<c:url value="/resources/css/bootstrap.min.css" />"
@@ -31,7 +31,7 @@
 				</button>
 			</div>
 			<div align="center">
-				<h2>Kmunda Workflow Engine</h2>
+				<h2>Kmunda Workflow Engine Samsung Tizen</h2>
 			</div>
 
 			<div class="sidebar" role="navigation" id="testb">

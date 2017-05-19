@@ -1,7 +1,7 @@
 <html>
 <head>
 <script type="text/javascript" src="jquery-1.2.6.min.js"></script>
-<title>Kmunda Workflow Engine</title>
+<title>Kmunda Workflow Engine Samsung Tizen</title>
 </head>
 <body>
 	<br />
@@ -9,7 +9,7 @@
 	<br />
 	<br />
 	<div style="text-align: center">
-		<h2>Kmunda Workflow Engine</h2>
+		<h2>Kmunda Workflow Engine for Samsung Tizen</h2>
 		<h4>${message}</h4>
 		<h4>
 			<a href="bpm.htm">Zurueck zur Hauptseite</a>
