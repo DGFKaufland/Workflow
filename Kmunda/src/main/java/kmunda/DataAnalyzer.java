@@ -28,7 +28,7 @@ public class DataAnalyzer implements Runnable {
 	public DataAnalyzer(String name) {
 		threadName = name;
 		Flows = new HashMap<String, String>();
-		System.out.println("Starting Data Analyzer... ");
+		System.out.println("Starting Samsung Data Analyzer... ");
 	}
 
 	public void start() {

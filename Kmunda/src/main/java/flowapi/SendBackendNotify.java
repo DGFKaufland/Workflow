@@ -28,7 +28,7 @@ abstract public class SendBackendNotify implements JavaDelegate {
 	@SuppressWarnings("unchecked")
 	public void sendMessage(int receiver, String messageText) {
 		try {
-			URL url = new URL("http://dgf-mbe.azurewebsites.net/api/v1/notifications");
+			URL url = new URL("http://dgf-mbe.azurewebsites.net/api/v1/notifications_for_samsung");
 			// Proxy proxy = new Proxy(Proxy.Type.HTTP, new
 			// InetSocketAddress("web-proxy", 8088));
 			// HttpURLConnection conn = (HttpURLConnection)
@@ -40,7 +40,7 @@ abstract public class SendBackendNotify implements JavaDelegate {
 
 			JSONObject notification = new JSONObject();
 			notification.put("toContactId", new Integer(receiver));
-			notification.put("fromContactName", "Kmunda");
+			notification.put("fromContactName", "Kmunda_samsung");
 			notification.put("fromContactId", 1);
 			notification.put("body", messageText);
 			notification.put("state", "OPEN");

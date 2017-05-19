@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kmunda Workflow Engine</title>
+<title>Kmunda Samsung Workflow Engine</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="<c:url value="/resources/css/bootstrap.min.css" />"
@@ -31,17 +31,17 @@
 				</button>
 			</div>
 			<div align="center">
-				<h2>Kmunda Workflow Engine</h2>
+				<h2>Kmunda Samsung Workflow Engine</h2>
 			</div>
 
 			<div class="sidebar" role="navigation" id="testb">
 				<div class="collapse navbar-collapse" id="collapsed-navigation" style="margin-top: 10px; margin-left: 10px; align: top">					<h4>Engine Tasks</h4>
 					<ul class="nav">
 						<li><div>
-								<a href="run.htm">Engine starten </a>
+								<a href="run.htm">Tizen-Engine starten </a>
 							</div></li>
 						<li><div>
-								<a href="reset.htm">Engine stoppen</a>
+								<a href="reset.htm">Tizen-Engine stoppen</a>
 							</div>
 						</li>
 					</ul>

@@ -17,9 +17,9 @@ public class Main {
 	public ModelAndView init() {
 		System.out.println("UI: Got /bpm, Request #" + ++counter);
 		if (Status.bpmRunning) {
-			message0 = "BPM-Workflow aktiv... <br> ";
+			message0 = "Samsung BPM-Workflow aktiv... <br> ";
 		} else
-			message0 = "BPM-Workflow inaktiv<br>";
+			message0 = "Samsung BPM-Workflow inaktiv<br>";
 
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
@@ -31,7 +31,7 @@ public class Main {
 	public ModelAndView swicth() {
 		System.out.println("UI: Got /run, Request #" + ++counter);
 		if (Status.bpmRunning) {
-			message0 = "BPM-Workflow aktiv ... <br> ";
+			message0 = "Samsung BPM-Workflow aktiv ... <br> ";
 		} else {
 			Status.bpmRunning = true;
 			T1 = new DataAnalyzer("DataAnalyzer");
@@ -40,7 +40,7 @@ public class Main {
 			
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("index");
-		String message1 = "Workflow Engine startet...";
+		String message1 = "Samsung Workflow Engine startet...";
 		mav.addObject("message", message1);
 
 		return mav;
@@ -49,7 +49,7 @@ public class Main {
 	@RequestMapping("/reset")
 	public ModelAndView startCollection() {
 		System.out.println("UI: Got /reset, Request #" + ++counter);
-		message0 = "Workflow Engine stopped...";
+		message0 = "Samsung Workflow Engine stopped...";
 
 		Status.bpmRunning = false;
 

@@ -9,7 +9,7 @@
 	<br />
 	<br />
 	<div style="text-align: center">
-		<h2>Kmunda Workflow Engine</h2>
+		<h2>Kmunda Samsung Workflow Engine</h2>
 		<h4>${message}</h4>
 		<h4>
 			<a href="bpm.htm">Zurueck zur Hauptseite</a>
