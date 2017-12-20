@@ -40,7 +40,7 @@ abstract public class SendBackendNotify implements JavaDelegate {
 
 			JSONObject notification = new JSONObject();
 			notification.put("toContactId", new Integer(receiver));
-			notification.put("fromContactName", "Kmunda_samsung");
+			notification.put("fromContactName", "Kmunda_basket");
 			notification.put("fromContactId", 1);
 			notification.put("body", messageText);
 			notification.put("state", "OPEN");
