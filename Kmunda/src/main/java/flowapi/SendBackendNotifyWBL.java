@@ -24,7 +24,7 @@ public class SendBackendNotifyWBL extends SendBackendNotify {
 	    // String timeStamp = new SimpleDateFormat("EEE, MMM d, HH:mm").format();
 	    
 		messageText = "[" + formattedNowInTimeZone + "] " + sMobileMsg +
-				      data.getAbteilungsName() + "muss dringend geleert werden!!";
+				      data.getAbteilungsName() + " muss dringend geleert werden!!";
 		System.out.println("Flow SendBackendNotify: \"" + messageText + "\"");
 		sendMessage(data.getWBL_Mobile_ID(), messageText);
 		execution.setVariable("Notification_ID", notification_ID);
